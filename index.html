@@ -267,6 +267,51 @@
     .testimonial .attr { font-size: 0.82rem; color: #525252; }
     .testimonial .attr strong { color: #a3a3a3; display: block; }
 
+    /* INDUSTRY */
+    .industry {
+      padding: 72px 0;
+      border-bottom: 1px solid #1f1f1f;
+    }
+    .industry h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .industry .subtitle {
+      color: #a3a3a3;
+      margin-bottom: 48px;
+    }
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .industry-card {
+      background: #141414;
+      border: 1px solid #1f1f1f;
+      border-radius: 8px;
+      padding: 16px 18px;
+      transition: border-color 0.15s;
+    }
+    .industry-card:hover { border-color: #22c55e; }
+    .industry-card a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #e5e5e5;
+      display: block;
+    }
+    .industry-card a:hover { color: #22c55e; text-decoration: none; }
+    .industry-card .industry-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #525252;
+      margin-bottom: 6px;
+    }
+
     /* ARTICLES */
     .articles {
       padding: 72px 0;
@@ -445,6 +490,56 @@
         <div class="testimonial">
           <blockquote>"I sent a reactivation campaign to customers who hadn't been in for 90 days. Booked 11 appointments in 48 hours. That money was just sitting there."</blockquote>
           <div class="attr"><strong>Auto detailing shop</strong> Denver, CO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="industry">
+    <div class="container">
+      <p class="section-label">By Industry</p>
+      <h2>Built for your type of business.</h2>
+      <p class="subtitle">Each guide covers the exact automations that move the needle for that specific vertical.</p>
+      <div class="industry-grid">
+        <div class="industry-card">
+          <p class="industry-label">Auto Services</p>
+          <a href="articles/ai-automation-car-wash.html">AI Automation for Car Washes</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Beauty &amp; Wellness</p>
+          <a href="articles/ai-automation-hair-salon.html">AI Tools for Hair Salons</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Home Services</p>
+          <a href="articles/ai-automation-hvac.html">AI Automation for HVAC Companies</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Exterior &amp; Roofing</p>
+          <a href="articles/ai-automation-roofing.html">AI for Roofing Companies</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Trade Services</p>
+          <a href="articles/ai-automation-plumber.html">AI for Plumbers</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Auto Repair</p>
+          <a href="articles/ai-automation-auto-repair.html">AI for Auto Repair Shops</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Healthcare</p>
+          <a href="articles/ai-automation-dental-practice.html">AI for Dental Practices</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Fitness</p>
+          <a href="articles/ai-automation-gym-fitness.html">AI for Gyms &amp; Fitness Studios</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Outdoor Services</p>
+          <a href="articles/ai-automation-landscaping.html">AI for Landscaping Companies</a>
+        </div>
+        <div class="industry-card">
+          <p class="industry-label">Real Estate</p>
+          <a href="articles/ai-automation-real-estate-agent.html">AI for Real Estate Agents</a>
         </div>
       </div>
     </div>
