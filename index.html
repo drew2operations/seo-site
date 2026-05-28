@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Automation for Local Businesses | Drew2 Operations</title>
+  <meta name="description" content="Stop losing customers to silence. Drew2 Operations builds AI automation systems for local businesses — review responses, appointment reminders, customer reactivation, and more. No code required." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://drew2operations.github.io/seo-site/" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0f0f0f;
+      color: #e5e5e5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    a { color: #22c55e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      border-bottom: 1px solid #1f1f1f;
+      padding: 18px 0;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    nav .brand { font-weight: 700; font-size: 1.05rem; color: #fff; letter-spacing: -0.01em; }
+    nav .nav-links { display: flex; gap: 24px; }
+    nav .nav-links a { color: #a3a3a3; font-size: 0.9rem; }
+    nav .nav-links a:hover { color: #22c55e; text-decoration: none; }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 64px;
+      border-bottom: 1px solid #1f1f1f;
+    }
+    .hero .eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #22c55e;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 24px;
+      max-width: 680px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #a3a3a3;
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
+    .btn {
+      display: inline-block;
+      background: #22c55e;
+      color: #0f0f0f;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #16a34a; text-decoration: none; color: #0f0f0f; }
+    .btn-ghost {
+      display: inline-block;
+      border: 1px solid #2e2e2e;
+      color: #e5e5e5;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 6px;
+      margin-left: 12px;
+      transition: border-color 0.15s;
+    }
+    .btn-ghost:hover { border-color: #22c55e; color: #22c55e; text-decoration: none; }
+
+    /* PROBLEM/SOLUTION */
+    .problem-solution {
+      padding: 72px 0;
+      border-bottom: 1px solid #1f1f1f;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #525252;
+      margin-bottom: 16px;
+    }
+    .problem-solution h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 48px;
+    }
+    @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+    .col-block h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .col-block.problem h3 { color: #ef4444; }
+    .col-block.solution h3 { color: #22c55e; }
+    .col-block ul { list-style: none; padding: 0; }
+    .col-block ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #1a1a1a;
+      color: #a3a3a3;
+      font-size: 0.95rem;
+    }
+    .col-block ul li:last-child { border-bottom: none; }
+    .col-block.problem ul li::before { content: "✕  "; color: #ef4444; font-weight: 700; }
+    .col-block.solution ul li::before { content: "✓  "; color: #22c55e; font-weight: 700; }
+
+    /* PRODUCTS */
+    .products {
+      padding: 72px 0;
+      border-bottom: 1px solid #1f1f1f;
+    }
+    .products h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .products .subtitle {
+      color: #a3a3a3;
+      margin-bottom: 48px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: #141414;
+      border: 1px solid #1f1f1f;
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: border-color 0.15s;
+    }
+    .product-card:hover { border-color: #22c55e; }
+    .product-card .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #22c55e;
+      background: rgba(34, 197, 94, 0.1);
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .product-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .product-card p {
+      font-size: 0.88rem;
+      color: #737373;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .product-card .price {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .product-card .price span { font-size: 0.85rem; font-weight: 400; color: #525252; }
+    .card-link {
+      display: block;
+      text-align: center;
+      background: #22c55e;
+      color: #0f0f0f;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 11px 0;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+    .card-link:hover { background: #16a34a; text-decoration: none; color: #0f0f0f; }
+
+    /* DFY */
+    .dfy-band {
+      padding: 56px 0;
+      border-bottom: 1px solid #1f1f1f;
+      background: #121212;
+    }
+    .dfy-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .dfy-inner h2 {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      max-width: 500px;
+    }
+    .dfy-inner p { color: #737373; font-size: 0.92rem; margin-top: 8px; max-width: 460px; }
+    .dfy-right { flex-shrink: 0; text-align: right; }
+    .dfy-right .price-big { font-size: 2rem; font-weight: 800; color: #22c55e; }
+    .dfy-right .price-sub { font-size: 0.8rem; color: #525252; margin-bottom: 16px; }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      padding: 72px 0;
+      border-bottom: 1px solid #1f1f1f;
+    }
+    .testimonials h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin-bottom: 48px;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .testimonial {
+      background: #141414;
+      border: 1px solid #1f1f1f;
+      border-radius: 10px;
+      padding: 28px 24px;
+    }
+    .testimonial blockquote {
+      font-size: 0.95rem;
+      color: #d4d4d4;
+      font-style: normal;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .testimonial .attr { font-size: 0.82rem; color: #525252; }
+    .testimonial .attr strong { color: #a3a3a3; display: block; }
+
+    /* ARTICLES */
+    .articles {
+      padding: 72px 0;
+      border-bottom: 1px solid #1f1f1f;
+    }
+    .articles h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin-bottom: 48px;
+    }
+    .article-list { display: flex; flex-direction: column; gap: 0; }
+    .article-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid #1a1a1a;
+      flex-wrap: wrap;
+    }
+    .article-item:last-child { border-bottom: none; }
+    .article-item a {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #e5e5e5;
+    }
+    .article-item a:hover { color: #22c55e; text-decoration: none; }
+    .article-item .arrow { color: #22c55e; font-size: 1rem; flex-shrink: 0; }
+
+    /* FINAL CTA */
+    .final-cta {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .final-cta p { color: #737373; margin-bottom: 36px; font-size: 1rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #1f1f1f;
+      padding: 32px 0;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 0.82rem; color: #525252; }
+    footer .footer-links { display: flex; gap: 20px; }
+    footer .footer-links a { font-size: 0.82rem; color: #525252; }
+    footer .footer-links a:hover { color: #22c55e; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <span class="brand">Drew2 Operations</span>
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="articles/local-business-ai-tools-2026.html">Articles</a>
+        <a href="https://drewops.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">AI Automation for Local Businesses</p>
+      <h1>Stop losing customers to silence.</h1>
+      <p>Your competitors are responding faster, following up automatically, and winning back old customers while you sleep. Here's how to close that gap without hiring anyone.</p>
+      <a href="#products" class="btn">See the tools</a>
+      <a href="articles/local-business-ai-tools-2026.html" class="btn-ghost">Read the guide</a>
+    </div>
+  </section>
+
+  <section class="problem-solution">
+    <div class="container">
+      <p class="section-label">The problem</p>
+      <h2>Most local businesses leak money the same five ways.</h2>
+      <p style="color:#737373; max-width:560px;">No-shows, unanswered reviews, cold leads going cold, past customers never contacted again. None of these require a human fix. They require a system.</p>
+      <div class="two-col">
+        <div class="col-block problem">
+          <h3>Without automation</h3>
+          <ul>
+            <li>Reviews sit unanswered for days</li>
+            <li>30–40% of appointments no-show</li>
+            <li>Leads go cold after the first contact</li>
+            <li>Past customers are never re-engaged</li>
+            <li>Owner handles every routine task manually</li>
+          </ul>
+        </div>
+        <div class="col-block solution">
+          <h3>With the right system</h3>
+          <ul>
+            <li>Every review gets a reply within minutes</li>
+            <li>Reminders cut no-shows by 30–40%</li>
+            <li>Sequences nurture leads automatically</li>
+            <li>Win-back campaigns run on their own</li>
+            <li>You focus on work only you can do</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="container">
+      <p class="section-label">Products</p>
+      <h2>Plug-in automation packs. Install once, run forever.</h2>
+      <p class="subtitle">Each pack is a ready-to-deploy OpenClaw skill built for a specific business type. No developers, no monthly SaaS fees.</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="tag">Local Business</span>
+          <h3>Local Business Automation Pack</h3>
+          <p>Review responses, appointment reminders, lead follow-up, and customer reactivation — all in one skill built for local service businesses.</p>
+          <div class="price">$29 <span>one-time</span></div>
+          <a href="https://drewops.gumroad.com/l/LocalBusinessPackOpenClawSkill" target="_blank" rel="noopener" class="card-link">Get the pack →</a>
+        </div>
+        <div class="product-card">
+          <span class="tag">E-commerce</span>
+          <h3>E-commerce Revenue Pack</h3>
+          <p>Cart abandonment recovery, post-purchase sequences, review requests, and reactivation flows for online stores.</p>
+          <div class="price">$29 <span>one-time</span></div>
+          <a href="https://drewops.gumroad.com/l/E-commerceRevenuePack" target="_blank" rel="noopener" class="card-link">Get the pack →</a>
+        </div>
+        <div class="product-card">
+          <span class="tag">Creators</span>
+          <h3>Newsletter &amp; Creator Pack</h3>
+          <p>Automate subscriber onboarding, re-engagement, sponsor outreach follow-ups, and content repurposing workflows.</p>
+          <div class="price">$29 <span>one-time</span></div>
+          <a href="https://drewops.gumroad.com/l/NewsletterCreatorPack_OpenClawSkill" target="_blank" rel="noopener" class="card-link">Get the pack →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dfy-band">
+    <div class="container">
+      <div class="dfy-inner">
+        <div>
+          <h2>Want it built for you?</h2>
+          <p>Done-for-you setup. One-time project that gets your automations installed, configured, and running. Or stay on a monthly retainer and let me keep building.</p>
+          <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://drewops.gumroad.com/l/drdcjm" target="_blank" rel="noopener" class="btn">Done-For-You Setup — $299</a>
+            <a href="https://drewops.gumroad.com/l/hdeag" target="_blank" rel="noopener" class="btn-ghost">Monthly Retainer — $297/mo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label">Results</p>
+      <h2>What business owners are saying.</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <blockquote>"Set it up on a Saturday. By Monday morning it had already replied to three reviews I would have forgotten about for a week. Customers noticed."</blockquote>
+          <div class="attr"><strong>Hair salon owner</strong> Atlanta, GA</div>
+        </div>
+        <div class="testimonial">
+          <blockquote>"We were losing probably 35% of appointments to no-shows. Two weeks in, that number is closer to 12%. The reminder sequence just runs."</blockquote>
+          <div class="attr"><strong>Physical therapy clinic</strong> Austin, TX</div>
+        </div>
+        <div class="testimonial">
+          <blockquote>"I sent a reactivation campaign to customers who hadn't been in for 90 days. Booked 11 appointments in 48 hours. That money was just sitting there."</blockquote>
+          <div class="attr"><strong>Auto detailing shop</strong> Denver, CO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="articles">
+    <div class="container">
+      <p class="section-label">Guides</p>
+      <h2>Learn before you buy.</h2>
+      <div class="article-list">
+        <div class="article-item">
+          <a href="articles/local-business-ai-tools-2026.html">The 5 AI Automations Every Local Business Should Be Running in 2026</a>
+          <span class="arrow">→</span>
+        </div>
+        <div class="article-item">
+          <a href="articles/ai-review-responses-local-business.html">How Local Businesses Are Using AI to Respond to Every Google Review Automatically</a>
+          <span class="arrow">→</span>
+        </div>
+        <div class="article-item">
+          <a href="articles/reduce-no-shows-appointment-reminders.html">The AI Follow-Up System That Cut No-Shows by 40% for Local Service Businesses</a>
+          <span class="arrow">→</span>
+        </div>
+        <div class="article-item">
+          <a href="articles/customer-reactivation-local-business.html">How to Win Back Lost Customers Automatically (Without Hiring Anyone)</a>
+          <span class="arrow">→</span>
+        </div>
+        <div class="article-item">
+          <a href="articles/ai-automation-restaurant.html">AI Automation for Restaurants: What Actually Works in 2026</a>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Pick the pack that fits your business.</h2>
+      <p>One-time purchase. No subscriptions, no lock-in. Download, install, run.</p>
+      <a href="#products" class="btn">Browse all products</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Drew2 Operations</p>
+      <div class="footer-links">
+        <a href="https://drewops.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+        <a href="https://x.com/drew2operations" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="articles/local-business-ai-tools-2026.html">Articles</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

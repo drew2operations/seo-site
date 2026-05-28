@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drew2operations.github.io/seo-site/sitemap.xml
